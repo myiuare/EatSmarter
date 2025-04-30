@@ -32,7 +32,7 @@ session_start();
 
             while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 echo '<div class="plat">';
-                echo '<h3>' . htmlspecialchars($data['nom']) . '</h3>';
+                echo '<h3><a href="plats.php?id=' . $data['id_article'] . '">' . htmlspecialchars($data['nom']) . '</a></h3>';
                 echo '<p>' . htmlspecialchars($data['description']) . '</p>';
                 echo '<strong>' . htmlspecialchars($data['prix']) . ' €</strong><br>';
                 echo '<img src="' . $data["image_url"] . '" class="image-plat"><br>';
